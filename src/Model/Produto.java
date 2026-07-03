@@ -9,12 +9,13 @@ public class Produto extends BaseEntity {
     private double preco;
     private int estoque;
 
-    public Produto(Long id, String nome, String categoria, double preco, int estoque) {
-        super.setId(id); // delega pra BaseEntity
+    public Produto(Long id,String nome, String categoria,double preco, int estoque)
+            throws PrecoException, EstoqueException {
+        super.setId(id);
         this.nome = nome;
         this.categoria = categoria;
-        this.preco = preco;
-        this.estoque = estoque;
+        setPreco(preco);
+        setEstoque(estoque);
     }
 
     public String getNome() {

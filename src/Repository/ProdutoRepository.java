@@ -18,7 +18,7 @@ public class ProdutoRepository {
         produtos.add(produto);
     }
 
-    // Listagem dos produtos (Retorna a lista em vez de printar)
+    // Listagem dos produtos (Retorna a lista em vez de printer)
     public List<Produto> listarProdutos() {
         return produtos;
     }
